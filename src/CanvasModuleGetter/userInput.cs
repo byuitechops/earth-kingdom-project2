@@ -2,31 +2,72 @@ using System;
 
 namespace CanvasModuleGetter
 {
-    public class userInput
+    public class UserInput
     {
+
+        private string courseId;
+        private string reportType;
+
+
+        public UserInput()
+        {
+            this.courseId = "";
+            this.reportType = "";
+        }
+        public UserInput(string courseId, string reportType)
+        {
+            this.courseId = courseId;
+            this.reportType = reportType;
+        }
+
         //not sure if we want to prompt user for their token, or not.
-        public static string getToken(){
+        //Evgeniy: I feel like we donn't need this. The user won't be enetring that huge string into the program. 
+        public static string getToken()
+        {
             Console.Write("Enter your token: ");
             string token = Console.ReadLine();
             return token;
         }
 
         //I imagine that this needs to be a list?
-        public static void getCourses(){
+        //Evgeniy: Does this need to be in this Class? 
+        public static void getCourses()
+        {
 
         }
 
-        public static string reportType(){
-            Console.Write("Enter a report type (CSV, JSON, HTML): ");
-            string type = Console.ReadLine();
-            if (type != 'CSV' || type != 'JSON' || type != 'HTML'){
-                Console.WriteLine("Report type not valid.");
-                reportType();
+        public string getCourseId()
+        {
+            return courseId;
+        }
+        public string getReportType()
+        {
+            return reportType;
+        }
+
+        public void promptUser()
+        {
+            Console.Write("Enter course ID: ");
+            courseId = Console.ReadLine();
+
+            string type = "";
+
+            // if (type != "CSV" || type != "JSON" || type != "HTML")
+            // {
+            //     Console.WriteLine("Report type not valid.");
+            //     type = getReportType();
+            // }
+
+            //     return type;
+
+            while (type != "CSV" && type != "JSON" && type != "HTML")
+            {
+                Console.Write("Enter a report type (CSV, JSON, HTML): ");
+                type = Console.ReadLine().ToUpper();
+                //type.ToUpper();
             }
-            else{
-                return type;
-            }
+
+            reportType = type;
         }
     }
-
 }

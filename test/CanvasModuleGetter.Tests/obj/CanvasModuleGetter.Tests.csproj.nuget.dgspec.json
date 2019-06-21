@@ -4,6 +4,58 @@
     "C:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\test\\CanvasModuleGetter.Tests\\CanvasModuleGetter.Tests.csproj": {}
   },
   "projects": {
+    "C:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj",
+        "projectName": "CanvasModuleGetter",
+        "projectPath": "C:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj",
+        "packagesPath": "C:\\Users\\Evgeniy\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\src\\CanvasModuleGetter\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Evgeniy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.2"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.2": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.2": {
+          "dependencies": {
+            "Microsoft.NETCore.App": {
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.2.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    },
     "C:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\test\\CanvasModuleGetter.Tests\\CanvasModuleGetter.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -29,7 +81,11 @@
         },
         "frameworks": {
           "netcoreapp2.2": {
-            "projectReferences": {}
+            "projectReferences": {
+              "C:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj": {
+                "projectPath": "C:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj"
+              }
+            }
           }
         },
         "warningProperties": {

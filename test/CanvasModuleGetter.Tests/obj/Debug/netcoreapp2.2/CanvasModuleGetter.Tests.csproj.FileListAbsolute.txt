@@ -12,3 +12,6 @@ C:\Users\Evgeniy\Documents\Earth-Kingdom\earth-kingdom-project2\test\CanvasModul
 C:\Users\Evgeniy\Documents\Earth-Kingdom\earth-kingdom-project2\test\CanvasModuleGetter.Tests\obj\Debug\netcoreapp2.2\CanvasModuleGetter.Tests.AssemblyInfo.cs
 C:\Users\Evgeniy\Documents\Earth-Kingdom\earth-kingdom-project2\test\CanvasModuleGetter.Tests\obj\Debug\netcoreapp2.2\CanvasModuleGetter.Tests.dll
 C:\Users\Evgeniy\Documents\Earth-Kingdom\earth-kingdom-project2\test\CanvasModuleGetter.Tests\obj\Debug\netcoreapp2.2\CanvasModuleGetter.Tests.pdb
+C:\Users\Evgeniy\Documents\Earth-Kingdom\earth-kingdom-project2\test\CanvasModuleGetter.Tests\bin\Debug\netcoreapp2.2\CanvasModuleGetter.dll
+C:\Users\Evgeniy\Documents\Earth-Kingdom\earth-kingdom-project2\test\CanvasModuleGetter.Tests\bin\Debug\netcoreapp2.2\CanvasModuleGetter.pdb
+C:\Users\Evgeniy\Documents\Earth-Kingdom\earth-kingdom-project2\test\CanvasModuleGetter.Tests\obj\Debug\netcoreapp2.2\CanvasModuleGetter.Tests.csproj.CopyComplete
