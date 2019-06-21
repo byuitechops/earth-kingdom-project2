@@ -8,6 +8,7 @@ namespace CanvasModuleGetter
     {
         static async Task Main(string[] args)
         {
+<<<<<<< HEAD
             UserInput up = new UserInput();
             up.promptUser();
             string reportType = up.getReportType();
@@ -18,6 +19,9 @@ namespace CanvasModuleGetter
             // string result = await ApiCall.MakeHTTPRequest(endPoint, api_token);
             // dynamic json = JsonConvert.DeserializeObject(result);
             // System.Console.WriteLine(json);
+=======
+            string reportType = UserInput.GetReportType();
+>>>>>>> 70d228a7f9b5f9a6f78bda6f307914f973887d71
         }
     }
 }
