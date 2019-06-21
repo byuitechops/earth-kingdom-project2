@@ -5,9 +5,9 @@ using System.Threading.Tasks;
 namespace CanvasModuleGetter
 {
     //This is basically the httphelper from the other project
-    public class apiCall
+    public class ApiCall
     {
-        private static readonly apiCall client = new apicall();
+        private static readonly ApiCall client = new Apicall();
         public static async Task<string> MakeHTTPRequest(string queryString, string api_token)
         {
             using (client)
