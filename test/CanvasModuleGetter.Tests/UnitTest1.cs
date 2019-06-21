@@ -16,4 +16,25 @@ namespace CanvasModuleGetter.Tests
             Assert.Equal(31, result);
         }
     }
+
+    public class userInputTest
+    {
+        [Fact]
+        public void tokenTest()
+        {
+
+        }
+
+        [Fact]
+        public void coursesTest()
+        {
+
+        }
+
+        [Fact]
+        public void reportTypeTest()
+        {
+            
+        }
+    }
 }
