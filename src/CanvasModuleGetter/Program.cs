@@ -6,7 +6,7 @@ namespace CanvasModuleGetter
     {
         static void Main(string[] args)
         {
-            
+            string reportType = UserInput.GetReportType();
         }
     }
 }
