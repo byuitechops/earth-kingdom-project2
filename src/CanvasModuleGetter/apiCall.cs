@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 
 namespace CanvasModuleGetter
 {
-    //This is basically the httphelper from the other project
+    //This is basically the httphelper from the other project.
     public class ApiCall
     {
         private static readonly ApiCall client = new Apicall();
