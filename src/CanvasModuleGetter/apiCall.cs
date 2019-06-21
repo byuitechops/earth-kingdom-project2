@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 
 namespace CanvasModuleGetter
 {
+    //This is basically the httphelper from the other project
     public class apiCall
     {
         private static readonly apiCall client = new apicall();

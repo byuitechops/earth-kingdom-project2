@@ -17,7 +17,7 @@ namespace CanvasModuleGetter.Tests
         }
     }
 
-    public class userInputTest
+    public class UserInputTest
     {
         [Fact]
         public void tokenTest()
@@ -34,7 +34,7 @@ namespace CanvasModuleGetter.Tests
         [Fact]
         public void reportTypeTest()
         {
-            
+
         }
     }
 }
