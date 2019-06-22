@@ -4,7 +4,6 @@ namespace CanvasModuleGetter
 {
     public class UserInput
     {
-
         private string courseId;
         private string reportType;
 
@@ -21,7 +20,7 @@ namespace CanvasModuleGetter
         }
 
         //not sure if we want to prompt user for their token, or not.
-        //Evgeniy: I feel like we donn't need this. The user won't be enetring that huge string into the program. 
+        //Evgeniy: I feel like we don't need this. The user won't be enetring that huge string into the program. 
         public static string getToken()
         {
             Console.Write("Enter your token: ");
@@ -45,26 +44,18 @@ namespace CanvasModuleGetter
             return reportType;
         }
 
+        //This function prompt the user for a course ID and the type of report file.
         public void promptUser()
         {
             Console.Write("Enter course ID: ");
             courseId = Console.ReadLine();
 
+
             string type = "";
-
-            // if (type != "CSV" || type != "JSON" || type != "HTML")
-            // {
-            //     Console.WriteLine("Report type not valid.");
-            //     type = getReportType();
-            // }
-
-            //     return type;
-
             while (type != "CSV" && type != "JSON" && type != "HTML")
             {
                 Console.Write("Enter a report type (CSV, JSON, HTML): ");
                 type = Console.ReadLine().ToUpper();
-                //type.ToUpper();
             }
 
             reportType = type;
