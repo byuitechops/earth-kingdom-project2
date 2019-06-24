@@ -23,13 +23,13 @@ namespace CanvasModuleGetter
         //Evgeniy: I feel like we don't need this. The user won't be enetring that huge string into the program. 
         public static string getToken()
         {
-            Console.Write("Enter your token: ");
-            string token = Console.ReadLine();
+            string token = System.Environment.GetEnvironmentVariable("CANVAS_API_TOKEN");
             return token;
         }
 
         //I imagine that this needs to be a list?
         //Evgeniy: Does this need to be in this Class? 
+        //Seth: Yes.
         public static void getCourses()
         {
 
