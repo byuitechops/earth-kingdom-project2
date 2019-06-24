@@ -21,7 +21,7 @@ namespace CanvasModuleGetter
             dynamic data = JsonConvert.DeserializeObject(result);
             //Console.WriteLine(data);
 
-            switch(reportType)
+            switch (reportType)
             {
                 case "CSV":
                     List<object> json = new List<dynamic>();
@@ -34,9 +34,10 @@ namespace CanvasModuleGetter
                     }
                     else
                     {
-                         json.Add(data);
+                        json.Add(data);
                     }
-                    CsvTransform.CsvTransformer(json);
+                    CsvTransform csv = new CsvTransform();
+                    csv.CsvTransformer(json);
                     break;
                 case "JSON":
                     Console.WriteLine("this is json");
@@ -48,7 +49,7 @@ namespace CanvasModuleGetter
                     Console.WriteLine("Not valid file type");
                     break;
             }
-           
+
         }
     }
 }
