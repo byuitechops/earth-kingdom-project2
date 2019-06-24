@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Evgeniy\\Documents\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj": {}
+    "c:\\Users\\Evgeniy\\Documents\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Evgeniy\\Documents\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj": {
+    "c:\\Users\\Evgeniy\\Documents\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Evgeniy\\Documents\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj",
+        "projectUniqueName": "c:\\Users\\Evgeniy\\Documents\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj",
         "projectName": "CanvasModuleGetter",
-        "projectPath": "C:\\Users\\Evgeniy\\Documents\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj",
+        "projectPath": "c:\\Users\\Evgeniy\\Documents\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj",
         "packagesPath": "C:\\Users\\Evgeniy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Evgeniy\\Documents\\earth-kingdom-project2\\src\\CanvasModuleGetter\\obj\\",
+        "outputPath": "c:\\Users\\Evgeniy\\Documents\\earth-kingdom-project2\\src\\CanvasModuleGetter\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -41,6 +41,10 @@
       "frameworks": {
         "netcoreapp2.2": {
           "dependencies": {
+            "CsvHelper": {
+              "target": "Package",
+              "version": "[12.1.2, )"
+            },
             "Microsoft.NETCore.App": {
               "suppressParent": "All",
               "target": "Package",

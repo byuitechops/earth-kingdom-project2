@@ -13,7 +13,7 @@ namespace CanvasModuleGetter
             UserInput up = new UserInput();
             up.promptUser();
             string reportType = up.getReportType();
-            string courseId = up.getCourseId();
+            string courseId = up.getCourseId();     
             string api_token = up.getToken();
             
             string result = await ApiCall.MakeHTTPRequest(courseId, api_token);
@@ -26,33 +26,35 @@ namespace CanvasModuleGetter
             
             System.Console.WriteLine(data);
 
-            // switch(reportType)
-            // {
-            //     case "CSV":
-            //         List<object> json = new List<dynamic>();
-            //         if (data is JArray)
-            //         {
-            //             foreach (var prop in data)
-            //             {
-            //                 json.Add(prop);
-            //             }
-            //         }
-            //         else
-            //         {
-            //              json.Add(data);
-            //         }
-            //         CsvTransform.CsvTransformer(json);
-            //         break;
-            //     case "JSON":
-            //         Console.WriteLine("this is json");
-            //         break;
-            //     case "HTML":
-            //         Console.WriteLine("this is html");
-            //         break;
-            //     default:
-            //         Console.WriteLine("Not valid file type");
-            //         break;
-            // }
+            switch (reportType)
+            {
+                case "CSV":
+                    List<object> json = new List<dynamic>();
+                    if (data is JArray)
+                    {
+                        foreach (var prop in data)
+                        {
+                            json.Add(prop);
+                        }
+                    }
+                    else
+                    {
+                        json.Add(data);
+                    }
+                    CsvTransform csv = new CsvTransform();
+                    csv.CsvTransformer(json);
+                    break;
+                case "JSON":
+                    JsonTransform jTransform = new JsonTransform();
+                    jTransform.JsonTransformer(data);
+                    break;
+                case "HTML":
+                    Console.WriteLine("this is html");
+                    break;
+                default:
+                    Console.WriteLine("Not valid file type");
+                    break;
+            }
         }
     }
 }

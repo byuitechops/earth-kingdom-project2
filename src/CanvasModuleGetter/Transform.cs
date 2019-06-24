@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using CsvHelper;
 using System.Collections.Generic;
 using System.IO;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace CanvasModuleGetter
@@ -16,8 +17,9 @@ namespace CanvasModuleGetter
 
     public class CsvTransform : Transform
     {
-        public static void CsvTransformer(List <dynamic> json) {
-            System.IO.File.WriteAllText(Directory.GetCurrentDirectory() + @"\activity02.csv",string.Empty);
+        public void CsvTransformer(List<dynamic> json)
+        {
+            System.IO.File.WriteAllText(Directory.GetCurrentDirectory() + @"\activity02.csv", string.Empty);
 
 
             using (TextWriter writer = new StreamWriter(Directory.GetCurrentDirectory() + @"\activity02.csv", true, System.Text.Encoding.UTF8))
@@ -47,11 +49,15 @@ namespace CanvasModuleGetter
 
     class JsonTransform : Transform
     {
-
+        public void JsonTransformer(dynamic data){
+            System.IO.File.WriteAllText(Directory.GetCurrentDirectory() + @"\activity02.csv", string.Empty);
+            string serialized = JsonConvert.SerializeObject(data);
+            System.IO.File.WriteAllText(Directory.GetCurrentDirectory() + @"\activity02.csv", serialized);
+        }
     }
 
     class HtmlTransform : Transform
     {
 
     }
-} 
+}
