@@ -12,10 +12,9 @@ namespace CanvasModuleGetter
             up.promptUser();
             string reportType = up.getReportType();
             string courseId = up.getCourseId();
-
-            string api_token = System.Environment.GetEnvironmentVariable("CANVAS_API_TOKEN");
-            string endPoint = args.Length != 0 ? args[0] : "/api/v1/courses/" + courseId;
-            string result = await ApiCall.MakeHTTPRequest(endPoint, api_token);
+            string token = up.getToken();
+            string endPoint = "/api/v1/courses/" + courseId + "/modules?includes[]=items";
+            string result = await ApiCall.MakeHTTPRequest(endPoint, token);
             dynamic json = JsonConvert.DeserializeObject(result);
             Console.WriteLine(json);
         }
