@@ -20,6 +20,7 @@ namespace CanvasModuleGetter
             string result = await ApiCall.MakeHTTPRequest(endPoint, api_token);
             dynamic data = JsonConvert.DeserializeObject(result);
             //Console.WriteLine(data);
+            //string serialized = JsonConvert.SerializeObject(data);
 
             switch (reportType)
             {
@@ -40,7 +41,8 @@ namespace CanvasModuleGetter
                     csv.CsvTransformer(json);
                     break;
                 case "JSON":
-                    Console.WriteLine("this is json");
+                    JsonTransform jTransform = new JsonTransform();
+                    jTransform.JsonTransformer(data);
                     break;
                 case "HTML":
                     Console.WriteLine("this is html");

@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using CsvHelper;
 using System.Collections.Generic;
 using System.IO;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
 namespace CanvasModuleGetter
@@ -48,7 +49,11 @@ namespace CanvasModuleGetter
 
     class JsonTransform : Transform
     {
-
+        public void JsonTransformer(dynamic data){
+            System.IO.File.WriteAllText(Directory.GetCurrentDirectory() + @"\activity02.csv", string.Empty);
+            string serialized = JsonConvert.SerializeObject(data);
+            System.IO.File.WriteAllText(Directory.GetCurrentDirectory() + @"\activity02.csv", serialized);
+        }
     }
 
     class HtmlTransform : Transform
