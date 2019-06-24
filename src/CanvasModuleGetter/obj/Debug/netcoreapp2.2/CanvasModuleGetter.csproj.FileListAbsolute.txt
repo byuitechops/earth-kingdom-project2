@@ -15,3 +15,8 @@ C:\Users\Evgeniy\Documents\earth-kingdom-project2\src\CanvasModuleGetter\obj\Deb
 C:\Users\Evgeniy\Documents\earth-kingdom-project2\src\CanvasModuleGetter\obj\Debug\netcoreapp2.2\CanvasModuleGetter.AssemblyInfo.cs
 C:\Users\Evgeniy\Documents\earth-kingdom-project2\src\CanvasModuleGetter\obj\Debug\netcoreapp2.2\CanvasModuleGetter.dll
 C:\Users\Evgeniy\Documents\earth-kingdom-project2\src\CanvasModuleGetter\obj\Debug\netcoreapp2.2\CanvasModuleGetter.pdb
+C:\Users\Evgeniy\Documents\earth-kingdom-project2\src\CanvasModuleGetter\bin\Debug\netcoreapp2.2\CanvasModuleGetter.deps.json
+C:\Users\Evgeniy\Documents\earth-kingdom-project2\src\CanvasModuleGetter\bin\Debug\netcoreapp2.2\CanvasModuleGetter.runtimeconfig.json
+C:\Users\Evgeniy\Documents\earth-kingdom-project2\src\CanvasModuleGetter\bin\Debug\netcoreapp2.2\CanvasModuleGetter.runtimeconfig.dev.json
+C:\Users\Evgeniy\Documents\earth-kingdom-project2\src\CanvasModuleGetter\bin\Debug\netcoreapp2.2\CanvasModuleGetter.dll
+C:\Users\Evgeniy\Documents\earth-kingdom-project2\src\CanvasModuleGetter\bin\Debug\netcoreapp2.2\CanvasModuleGetter.pdb
