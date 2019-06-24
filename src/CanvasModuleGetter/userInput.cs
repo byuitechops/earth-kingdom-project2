@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace CanvasModuleGetter
 {
@@ -6,7 +7,8 @@ namespace CanvasModuleGetter
     {
         private string courseId;
         private string reportType;
-
+        private string token;
+        private List<string> courses;
 
         public UserInput()
         {
@@ -19,19 +21,23 @@ namespace CanvasModuleGetter
             this.reportType = reportType;
         }
 
-        //not sure if we want to prompt user for their token, or not.
-        //Evgeniy: I feel like we don't need this. The user won't be enetring that huge string into the program. 
-        public static string getToken()
+        public string getToken()
         {
-            Console.Write("Enter your token: ");
-            string token = Console.ReadLine();
             return token;
         }
 
         //I imagine that this needs to be a list?
         //Evgeniy: Does this need to be in this Class? 
-        public static void getCourses()
+        //Seth: Yes.
+        public static void getCourseList()
         {
+            List<string> courseList = new List<string>();
+            string path = "";
+            while (path != "")
+            {
+                Console.Write("Enter the path to your course list CSV: ");
+                path = Console.ReadLine();
+            }
 
         }
 
@@ -47,9 +53,9 @@ namespace CanvasModuleGetter
         //This function prompt the user for a course ID and the type of report file.
         public void promptUser()
         {
+            token = System.Environment.GetEnvironmentVariable("CANVAS_API_TOKEN");
             Console.Write("Enter course ID: ");
             courseId = Console.ReadLine();
-
 
             string type = "";
             while (type != "CSV" && type != "JSON" && type != "HTML")

@@ -48,6 +48,7 @@ namespace CanvasModuleGetter
                     Console.WriteLine("Not valid file type");
                     break;
             }
+           
         }
     }
 }
