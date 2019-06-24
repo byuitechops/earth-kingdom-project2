@@ -14,6 +14,8 @@ namespace CanvasModuleGetter
         {
             this.courseId = "";
             this.reportType = "";
+            this.token = "";
+            this.courses = new List<string>();
         }
         public UserInput(string courseId, string reportType)
         {
