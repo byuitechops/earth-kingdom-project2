@@ -14,41 +14,45 @@ namespace CanvasModuleGetter
             up.promptUser();
             string reportType = up.getReportType();
             string courseId = up.getCourseId();
-
-            string api_token = System.Environment.GetEnvironmentVariable("CANVAS_API_TOKEN");
-            string endPoint = args.Length != 0 ? args[0] : "/api/v1/courses/" + courseId;
-            string result = await ApiCall.MakeHTTPRequest(endPoint, api_token);
+            string api_token = up.getToken();
+            
+            string result = await ApiCall.MakeHTTPRequest(courseId, api_token);
             dynamic data = JsonConvert.DeserializeObject(result);
-            //Console.WriteLine(data);
+            System.Console.WriteLine(data);
 
-            switch(reportType)
-            {
-                case "CSV":
-                    List<object> json = new List<dynamic>();
-                    if (data is JArray)
-                    {
-                        foreach (var prop in data)
-                        {
-                            json.Add(prop);
-                        }
-                    }
-                    else
-                    {
-                         json.Add(data);
-                    }
-                    CsvTransform.CsvTransformer(json);
-                    break;
-                case "JSON":
-                    Console.WriteLine("this is json");
-                    break;
-                case "HTML":
-                    Console.WriteLine("this is html");
-                    break;
-                default:
-                    Console.WriteLine("Not valid file type");
-                    break;
-            }
-           
+            List <string> courseIds = new List<string>(new string[] {"80", "80", "80"});
+            var result1 = await ApiCall.MakeHTTPRequest(courseIds, api_token);
+            System.Console.WriteLine(result1);
+            
+            System.Console.WriteLine(data);
+
+            // switch(reportType)
+            // {
+            //     case "CSV":
+            //         List<object> json = new List<dynamic>();
+            //         if (data is JArray)
+            //         {
+            //             foreach (var prop in data)
+            //             {
+            //                 json.Add(prop);
+            //             }
+            //         }
+            //         else
+            //         {
+            //              json.Add(data);
+            //         }
+            //         CsvTransform.CsvTransformer(json);
+            //         break;
+            //     case "JSON":
+            //         Console.WriteLine("this is json");
+            //         break;
+            //     case "HTML":
+            //         Console.WriteLine("this is html");
+            //         break;
+            //     default:
+            //         Console.WriteLine("Not valid file type");
+            //         break;
+            // }
         }
     }
 }

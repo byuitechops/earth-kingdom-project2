@@ -9,3 +9,9 @@ C:\Users\Evgeniy\Documents\Earth-Kingdom\earth-kingdom-project2\src\CanvasModule
 C:\Users\Evgeniy\Documents\Earth-Kingdom\earth-kingdom-project2\src\CanvasModuleGetter\bin\Debug\netcoreapp2.2\CanvasModuleGetter.pdb
 C:\Users\Evgeniy\Documents\Earth-Kingdom\earth-kingdom-project2\src\CanvasModuleGetter\obj\Debug\netcoreapp2.2\CanvasModuleGetter.dll
 C:\Users\Evgeniy\Documents\Earth-Kingdom\earth-kingdom-project2\src\CanvasModuleGetter\obj\Debug\netcoreapp2.2\CanvasModuleGetter.pdb
+C:\Users\Evgeniy\Documents\earth-kingdom-project2\src\CanvasModuleGetter\obj\Debug\netcoreapp2.2\CanvasModuleGetter.csprojAssemblyReference.cache
+C:\Users\Evgeniy\Documents\earth-kingdom-project2\src\CanvasModuleGetter\obj\Debug\netcoreapp2.2\CanvasModuleGetter.csproj.CoreCompileInputs.cache
+C:\Users\Evgeniy\Documents\earth-kingdom-project2\src\CanvasModuleGetter\obj\Debug\netcoreapp2.2\CanvasModuleGetter.AssemblyInfoInputs.cache
+C:\Users\Evgeniy\Documents\earth-kingdom-project2\src\CanvasModuleGetter\obj\Debug\netcoreapp2.2\CanvasModuleGetter.AssemblyInfo.cs
+C:\Users\Evgeniy\Documents\earth-kingdom-project2\src\CanvasModuleGetter\obj\Debug\netcoreapp2.2\CanvasModuleGetter.dll
+C:\Users\Evgeniy\Documents\earth-kingdom-project2\src\CanvasModuleGetter\obj\Debug\netcoreapp2.2\CanvasModuleGetter.pdb
