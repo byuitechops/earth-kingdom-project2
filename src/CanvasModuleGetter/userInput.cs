@@ -5,22 +5,17 @@ namespace CanvasModuleGetter
 {
     public class UserInput
     {
-        private string courseId;
+        private List<string> courseIds;
         private string reportType;
         private string token;
         private List<string> courses;
 
         public UserInput()
         {
-            this.courseId = "";
+            this.courseIds = new List<string>();
             this.reportType = "";
             this.token = "";
             this.courses = new List<string>();
-        }
-        public UserInput(string courseId, string reportType)
-        {
-            this.courseId = courseId;
-            this.reportType = reportType;
         }
 
         public string getToken()
@@ -28,9 +23,6 @@ namespace CanvasModuleGetter
             return token;
         }
 
-        //I imagine that this needs to be a list?
-        //Evgeniy: Does this need to be in this Class? 
-        //Seth: Yes.
         public static void getCourseList()
         {
             List<string> courseList = new List<string>();
@@ -40,12 +32,11 @@ namespace CanvasModuleGetter
                 Console.Write("Enter the path to your course list CSV: ");
                 path = Console.ReadLine();
             }
-
         }
 
-        public string getCourseId()
+        public List<string> getCourseIds()
         {
-            return courseId;
+            return courseIds;
         }
         public string getReportType()
         {
@@ -56,8 +47,17 @@ namespace CanvasModuleGetter
         public void promptUser()
         {
             token = System.Environment.GetEnvironmentVariable("CANVAS_API_TOKEN");
-            Console.Write("Enter course ID: ");
-            courseId = Console.ReadLine();
+
+            string courseId = "-1";
+            Console.WriteLine("Enter course IDs. To stop enter 0");
+            while (courseId != "0")
+            {
+                courseId = Console.ReadLine();
+                if (courseId != "0")
+                {
+                    courseIds.Add(courseId);
+                }
+            }
 
             string type = "";
             while (type != "CSV" && type != "JSON" && type != "HTML")

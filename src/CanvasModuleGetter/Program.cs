@@ -13,20 +13,11 @@ namespace CanvasModuleGetter
             UserInput up = new UserInput();
             up.promptUser();
             string reportType = up.getReportType();
-            string courseId = up.getCourseId();     
+            List<string> courseIds = up.getCourseIds();
             string api_token = up.getToken();
-            
-            // string result = await ApiCall.MakeHTTPRequest(courseId, api_token);
-            // dynamic data = JsonConvert.DeserializeObject(result);
-            // System.Console.WriteLine(data);
 
-            List <string> courseIds = new List<string>(new string[] {"80", "80", "80"});
             var result1 = await ApiCall.MakeHTTPRequest(courseIds, api_token);
-            foreach (var course in result1)
-            {
-                System.Console.WriteLine(course);
-            }
-            
+
             // System.Console.WriteLine(data);
 
             // switch (reportType)
