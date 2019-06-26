@@ -19,7 +19,7 @@ namespace CanvasModuleGetter
             //courses will be assigned a list of JArrays
             var courses = await ApiCall.MakeHTTPRequest(courseIds, api_token);
 
-            // System.Console.WriteLine(data);
+            // System.Console.WriteLine(courses);
 
             switch (reportType)
             {
