@@ -10,13 +10,14 @@ namespace CanvasModuleGetter
     {
         static async Task Main(string[] args)
         {
-            UserInput up = new UserInput();
-            up.promptUser();
-            string reportType = up.getReportType();
-            List<string> courseIds = up.getCourseIds();
-            string api_token = up.getToken();
+            UserInput UserInput = new UserInput();
+            UserInput.promptUser();
+            string reportType = UserInput.getReportType();
+            List<string> courseIds = UserInput.getCourseIds();
+            string api_token = UserInput.getToken();
 
-            var result1 = await ApiCall.MakeHTTPRequest(courseIds, api_token);
+            //courses will be assigned a list of JArrays
+            var courses = await ApiCall.MakeHTTPRequest(courseIds, api_token);
 
             // System.Console.WriteLine(data);
 

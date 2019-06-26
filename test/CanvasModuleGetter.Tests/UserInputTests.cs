@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using Xunit;
 
 namespace CanvasModuleGetter.Tests
@@ -14,15 +15,30 @@ namespace CanvasModuleGetter.Tests
         [Fact]
         public void courseIdTest()
         {
-            UserInput up = new UserInput("132", "C");
-            //Assert.Equal("132", up.getCourseIds());
+            List<string> courses = new List<string>()
+            {
+                "80", "80"
+            };
+            string reportType = "JSON";
+
+            UserInput userInput = new UserInput(courses, reportType);
+
+            Assert.Equal("80", userInput.getCourseIds()[0]);
+            Assert.Equal("80", userInput.getCourseIds()[1]);
         }
 
         //[Fact]
         public void reportTypeTest()
         {
-            UserInput up = new UserInput("140", "CSV");
-            Assert.Equal("CSV", up.getReportType());
+            List<string> courses = new List<string>()
+            {
+                "80"
+            };
+            string reportType = "JSON";
+
+            UserInput userInput = new UserInput(courses, reportType);
+
+            Assert.Equal("JSON", userInput.getReportType());
         }
     }
 }

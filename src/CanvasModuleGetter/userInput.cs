@@ -18,6 +18,14 @@ namespace CanvasModuleGetter
             this.courses = new List<string>();
         }
 
+        public UserInput(List<string> courseIds, string reportType)
+        {
+            this.courseIds = courseIds;
+            this.reportType = reportType;
+            this.token = System.Environment.GetEnvironmentVariable("CANVAS_API_TOKEN");
+            this.courses = new List<string>();
+        }
+
         public string getToken()
         {
             return token;
