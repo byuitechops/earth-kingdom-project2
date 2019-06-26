@@ -17,32 +17,50 @@ namespace CanvasModuleGetter
 
     public class CsvTransform : Transform
     {
-        public void CsvTransformer(List<dynamic> json)
+        public void CsvTransformer(List<JArray> courses)
         {
-            System.IO.File.WriteAllText(Directory.GetCurrentDirectory() + @"\activity02.csv", string.Empty);
+            var counter = 0;
+            foreach (var array in courses) {
+                counter++;
+                System.IO.File.WriteAllText(Directory.GetCurrentDirectory() + @"\activity02-" + counter + ".csv", string.Empty);
 
-
-            using (TextWriter writer = new StreamWriter(Directory.GetCurrentDirectory() + @"\activity02.csv", true, System.Text.Encoding.UTF8))
-            {
-                var csv = new CsvWriter(writer);
-                var firstObject = json[0];
-
-                foreach (JProperty property in firstObject)
-                    csv.WriteField(property.Name);
-                csv.NextRecord();
-
-
-
-                foreach (var obj in json)
-                {
-                    foreach (JProperty prop in obj)
+                 List<object> json = new List<dynamic>();
+                    if (array is JArray)
                     {
-                        csv.WriteField(prop.Value.ToString());
+                        foreach (var prop in array)
+                        {
+                            json.Add(prop);
+                        }
                     }
-                    csv.NextRecord();
-                }
+                    else
+                    {
+                        json.Add(array);
+                    }
+                    // foreach (var p in json){
+                    //     Console.WriteLine(p);
+                    // }
+                 using (TextWriter writer = new StreamWriter(Directory.GetCurrentDirectory() + @"\activity02-" + counter + ".csv", true, System.Text.Encoding.UTF8))
+                 {
+                   var csv = new CsvWriter(writer);
+                   var firstObject = json[0];
 
-                writer.Flush();
+                //   foreach (JProperty property in firstObject)
+                //       csv.WriteField(property.Name);
+                //  csv.NextRecord();
+
+
+
+                //  foreach (var obj in json)
+                //     {
+                //        foreach (JProperty prop in obj)
+                //         {
+                //          csv.WriteField(prop.Value.ToString());
+                //          }
+                //        csv.NextRecord();
+                //     }
+
+                //  writer.Flush();
+                  }
             }
         }
     }

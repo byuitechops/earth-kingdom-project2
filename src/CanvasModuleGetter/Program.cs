@@ -21,35 +21,23 @@ namespace CanvasModuleGetter
 
             // System.Console.WriteLine(data);
 
-            // switch (reportType)
-            // {
-            //     case "CSV":
-            //         List<object> json = new List<dynamic>();
-            //         if (data is JArray)
-            //         {
-            //             foreach (var prop in data)
-            //             {
-            //                 json.Add(prop);
-            //             }
-            //         }
-            //         else
-            //         {
-            //             json.Add(data);
-            //         }
-            //         CsvTransform csv = new CsvTransform();
-            //         csv.CsvTransformer(json);
-            //         break;
-            //     case "JSON":
-            //         JsonTransform jTransform = new JsonTransform();
-            //         jTransform.JsonTransformer(data);
-            //         break;
-            //     case "HTML":
-            //         Console.WriteLine("this is html");
-            //         break;
-            //     default:
-            //         Console.WriteLine("Not valid file type");
-            //         break;
-            // }
+            switch (reportType)
+            {
+                case "CSV":
+                    CsvTransform csv = new CsvTransform();
+                    csv.CsvTransformer(courses);
+                    break;
+                case "JSON":
+                    // JsonTransform jTransform = new JsonTransform();
+                    // jTransform.JsonTransformer(data);
+                    break;
+                case "HTML":
+                    Console.WriteLine("this is html");
+                    break;
+                default:
+                    Console.WriteLine("Not valid file type");
+                    break;
+            }
         }
     }
 }
