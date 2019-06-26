@@ -19,7 +19,7 @@ namespace CanvasModuleGetter
             //courses will be assigned a list of JArrays
             var courses = await ApiCall.MakeHTTPRequest(courseIds, api_token);
 
-            // System.Console.WriteLine(data);
+            // System.Console.WriteLine(courses);
 
             switch (reportType)
             {
@@ -28,8 +28,8 @@ namespace CanvasModuleGetter
                     csv.CsvTransformer(courses);
                     break;
                 case "JSON":
-                    // JsonTransform jTransform = new JsonTransform();
-                    // jTransform.JsonTransformer(data);
+                    JsonTransform jTransform = new JsonTransform();
+                    jTransform.JsonTransformer(courses);
                     break;
                 case "HTML":
                     Console.WriteLine("this is html");
