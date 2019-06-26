@@ -20,3 +20,14 @@ C:\Users\Evgeniy\Documents\earth-kingdom-project2\src\CanvasModuleGetter\bin\Deb
 C:\Users\Evgeniy\Documents\earth-kingdom-project2\src\CanvasModuleGetter\bin\Debug\netcoreapp2.2\CanvasModuleGetter.runtimeconfig.dev.json
 C:\Users\Evgeniy\Documents\earth-kingdom-project2\src\CanvasModuleGetter\bin\Debug\netcoreapp2.2\CanvasModuleGetter.dll
 C:\Users\Evgeniy\Documents\earth-kingdom-project2\src\CanvasModuleGetter\bin\Debug\netcoreapp2.2\CanvasModuleGetter.pdb
+C:\Users\sbolande\Documents\projects\earth-kingdom-project2\src\CanvasModuleGetter\bin\Debug\netcoreapp2.2\CanvasModuleGetter.deps.json
+C:\Users\sbolande\Documents\projects\earth-kingdom-project2\src\CanvasModuleGetter\bin\Debug\netcoreapp2.2\CanvasModuleGetter.runtimeconfig.json
+C:\Users\sbolande\Documents\projects\earth-kingdom-project2\src\CanvasModuleGetter\bin\Debug\netcoreapp2.2\CanvasModuleGetter.runtimeconfig.dev.json
+C:\Users\sbolande\Documents\projects\earth-kingdom-project2\src\CanvasModuleGetter\bin\Debug\netcoreapp2.2\CanvasModuleGetter.dll
+C:\Users\sbolande\Documents\projects\earth-kingdom-project2\src\CanvasModuleGetter\bin\Debug\netcoreapp2.2\CanvasModuleGetter.pdb
+C:\Users\sbolande\Documents\projects\earth-kingdom-project2\src\CanvasModuleGetter\obj\Debug\netcoreapp2.2\CanvasModuleGetter.csprojAssemblyReference.cache
+C:\Users\sbolande\Documents\projects\earth-kingdom-project2\src\CanvasModuleGetter\obj\Debug\netcoreapp2.2\CanvasModuleGetter.csproj.CoreCompileInputs.cache
+C:\Users\sbolande\Documents\projects\earth-kingdom-project2\src\CanvasModuleGetter\obj\Debug\netcoreapp2.2\CanvasModuleGetter.AssemblyInfoInputs.cache
+C:\Users\sbolande\Documents\projects\earth-kingdom-project2\src\CanvasModuleGetter\obj\Debug\netcoreapp2.2\CanvasModuleGetter.AssemblyInfo.cs
+C:\Users\sbolande\Documents\projects\earth-kingdom-project2\src\CanvasModuleGetter\obj\Debug\netcoreapp2.2\CanvasModuleGetter.dll
+C:\Users\sbolande\Documents\projects\earth-kingdom-project2\src\CanvasModuleGetter\obj\Debug\netcoreapp2.2\CanvasModuleGetter.pdb

@@ -28,8 +28,8 @@ namespace CanvasModuleGetter
                     csv.CsvTransformer(courses);
                     break;
                 case "JSON":
-                    // JsonTransform jTransform = new JsonTransform();
-                    // jTransform.JsonTransformer(data);
+                    JsonTransform jTransform = new JsonTransform();
+                    jTransform.JsonTransformer(courses);
                     break;
                 case "HTML":
                     Console.WriteLine("this is html");
