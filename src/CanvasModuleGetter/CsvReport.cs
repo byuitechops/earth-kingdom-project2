@@ -37,31 +37,31 @@ namespace CanvasModuleGetter
                         json.Add(prop);
                     }
                 //Console.WriteLine(json);
-                foreach (var p in json){
-                    Console.WriteLine(p);
-                }
+                // foreach (var p in json){
+                //     Console.WriteLine(p);
+                // }
                 using (TextWriter writer = new StreamWriter(Directory.GetCurrentDirectory() + @"\activity02-" + counter + ".csv", true, System.Text.Encoding.UTF8))
                 {
                     var csv = new CsvWriter(writer);
                     var firstObject = json[0];
 
                     //Console.WriteLine(firstObject);
-                    //   foreach (JProperty property in firstObject)
-                    //       csv.WriteField(property.Name);
-                    //  csv.NextRecord();
+                      foreach (JProperty property in firstObject)
+                          csv.WriteField(property.Name);
+                     csv.NextRecord();
 
 
 
-                    //  foreach (var obj in json)
-                    //     {
-                    //        foreach (JProperty prop in obj)
-                    //         {
-                    //          csv.WriteField(prop.Value.ToString());
-                    //          }
-                    //        csv.NextRecord();
-                    //     }
+                     foreach (var obj in json)
+                        {
+                           foreach (JProperty prop in obj)
+                            {
+                             csv.WriteField(prop.Value.ToString());
+                             }
+                           csv.NextRecord();
+                        }
 
-                    //  writer.Flush();
+                     writer.Flush();
                 }
             }
         }
