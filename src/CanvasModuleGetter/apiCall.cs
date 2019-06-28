@@ -46,7 +46,8 @@ namespace CanvasModuleGetter
                         string responseBody = await client.GetStringAsync(url);
                         courses.Add(responseBody);
                     }
-
+                    // foreach (var prop in courses)
+                    //     Console.WriteLine(prop);
                     return courses;
                 }
                 catch (HttpRequestException e)

@@ -26,7 +26,7 @@ namespace CanvasModuleGetter
                 counter++;
                 System.IO.File.WriteAllText(Directory.GetCurrentDirectory() + @"\activity02-" + counter + ".csv", string.Empty);
 
-                List<object> json = new List<dynamic>();
+                List<JToken> json = new List<JToken>();
                 
                     foreach (var prop in array)
                     {

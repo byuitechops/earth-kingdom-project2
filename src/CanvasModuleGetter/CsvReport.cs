@@ -1,7 +1,9 @@
 using System.Collections.Generic;
 using System.IO;
 using CsvHelper;
+using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using System;
 
 namespace CanvasModuleGetter
 {
@@ -16,34 +18,34 @@ namespace CanvasModuleGetter
             reportType = "CSV";
         }
 
-        public void CsvTransformer(List<JArray> courses)
+        public void CsvTransformer()
         {
             var counter = 0;
-            foreach (var course in courses)
+            foreach (var course in this.courses)
             {
                 counter++;
                 System.IO.File.WriteAllText(Directory.GetCurrentDirectory() + @"\activity02-" + counter + ".csv", string.Empty);
 
-                List<object> json = new List<dynamic>();
-                if (course is JArray)
-                {
-                    foreach (var prop in course)
-                    {
+                dynamic data = JsonConvert.DeserializeObject(course);
+                //Console.WriteLine(data);
+
+                //List<object> json = new List<dynamic>();
+                JArray json = new JArray();
+                    foreach (var prop in data)
+                    {   
+                        //Console.WriteLine(prop);
                         json.Add(prop);
                     }
+                //Console.WriteLine(json);
+                foreach (var p in json){
+                    Console.WriteLine(p);
                 }
-                else
-                {
-                    json.Add(course);
-                }
-                // foreach (var p in json){
-                //     Console.WriteLine(p);
-                // }
                 using (TextWriter writer = new StreamWriter(Directory.GetCurrentDirectory() + @"\activity02-" + counter + ".csv", true, System.Text.Encoding.UTF8))
                 {
                     var csv = new CsvWriter(writer);
                     var firstObject = json[0];
 
+                    //Console.WriteLine(firstObject);
                     //   foreach (JProperty property in firstObject)
                     //       csv.WriteField(property.Name);
                     //  csv.NextRecord();
@@ -66,6 +68,7 @@ namespace CanvasModuleGetter
 
         public void transform()
         {
+            this.CsvTransformer();
             //throw new System.NotImplementedException();
         }
 
