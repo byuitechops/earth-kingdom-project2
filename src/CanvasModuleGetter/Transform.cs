@@ -27,49 +27,23 @@ namespace CanvasModuleGetter
                 System.IO.File.WriteAllText(Directory.GetCurrentDirectory() + @"\activity02-" + counter + ".csv", string.Empty);
 
                 List<object> json = new List<dynamic>();
-                if (array is JArray)
-                {
+                
                     foreach (var prop in array)
                     {
                         json.Add(prop);
                     }
-<<<<<<< HEAD
-                    else
-                    {
-                        json.Add(array);
-                    }
+                    
                     // foreach (var p in json){
                     //     Console.WriteLine(p);
                     // }
-=======
-                }
-                else
-                {
-                    json.Add(array);
-                }
-                // foreach (var p in json){
-                //     Console.WriteLine(p);
-                // }
->>>>>>> d2008f0e5f8b5c50917866d5c8d3057f847ec9e4
                 using (TextWriter writer = new StreamWriter(Directory.GetCurrentDirectory() + @"\activity02-" + counter + ".csv", true, System.Text.Encoding.UTF8))
                 {
                     var csv = new CsvWriter(writer);
                     var firstObject = json[0];
 
-<<<<<<< HEAD
-                    //This is trying to loop through the first object and print out the keys.  https://stackoverflow.com/questions/36656177/loop-through-an-objects-properties-and-get-the-values-for-those-of-type-datetim?rq=1
-                    foreach (PropertyInfo prop in firstObject.GetType().GetProperties()){
-                        Console.WriteLine(prop.GetValue(firstObject, null));
-                    }
-                    //Console.WriteLine(firstObject);
-                    // foreach (JProperty property in firstObject)
-                    //   csv.WriteField(property.Name);
-                    // csv.NextRecord();
-=======
                     //   foreach (JProperty property in firstObject)
                     //       csv.WriteField(property.Name);
                     //  csv.NextRecord();
->>>>>>> d2008f0e5f8b5c50917866d5c8d3057f847ec9e4
 
 
 
@@ -82,11 +56,7 @@ namespace CanvasModuleGetter
                     //        csv.NextRecord();
                     //     }
 
-<<<<<<< HEAD
                 //  writer.Flush();
-=======
-                    //  writer.Flush();
->>>>>>> d2008f0e5f8b5c50917866d5c8d3057f847ec9e4
                 }
             }
         }
