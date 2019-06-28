@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\test\\CanvasModuleGetter.Tests\\CanvasModuleGetter.Tests.csproj": {}
+    "c:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\test\\CanvasModuleGetter.Tests\\CanvasModuleGetter.Tests.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj": {
+    "c:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj",
+        "projectUniqueName": "c:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj",
         "projectName": "CanvasModuleGetter",
-        "projectPath": "C:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj",
+        "projectPath": "c:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj",
         "packagesPath": "C:\\Users\\Evgeniy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\src\\CanvasModuleGetter\\obj\\",
+        "outputPath": "c:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\src\\CanvasModuleGetter\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -64,14 +64,14 @@
         }
       }
     },
-    "C:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\test\\CanvasModuleGetter.Tests\\CanvasModuleGetter.Tests.csproj": {
+    "c:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\test\\CanvasModuleGetter.Tests\\CanvasModuleGetter.Tests.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\test\\CanvasModuleGetter.Tests\\CanvasModuleGetter.Tests.csproj",
+        "projectUniqueName": "c:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\test\\CanvasModuleGetter.Tests\\CanvasModuleGetter.Tests.csproj",
         "projectName": "CanvasModuleGetter.Tests",
-        "projectPath": "C:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\test\\CanvasModuleGetter.Tests\\CanvasModuleGetter.Tests.csproj",
+        "projectPath": "c:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\test\\CanvasModuleGetter.Tests\\CanvasModuleGetter.Tests.csproj",
         "packagesPath": "C:\\Users\\Evgeniy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\test\\CanvasModuleGetter.Tests\\obj\\",
+        "outputPath": "c:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\test\\CanvasModuleGetter.Tests\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -90,8 +90,8 @@
         "frameworks": {
           "netcoreapp2.2": {
             "projectReferences": {
-              "C:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj": {
-                "projectPath": "C:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj"
+              "c:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj": {
+                "projectPath": "c:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj"
               }
             }
           }

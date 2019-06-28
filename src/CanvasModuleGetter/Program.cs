@@ -16,28 +16,19 @@ namespace CanvasModuleGetter
             List<string> courseIds = UserInput.getCourseIds();
             string api_token = UserInput.getToken();
 
-            //courses will be assigned a list of JArrays
+            //courses will be assigned a list of strings
             var courses = await ApiCall.MakeHTTPRequest(courseIds, api_token);
 
-            // System.Console.WriteLine(courses);
+            //report will be assigned the corrosponding Report Object
+            var report = ReportFactory.generateReport(reportType, courses);
 
-            switch (reportType)
-            {
-                case "CSV":
-                    CsvTransform csv = new CsvTransform();
-                    csv.CsvTransformer(courses);
-                    break;
-                case "JSON":
-                    JsonTransform jTransform = new JsonTransform();
-                    jTransform.JsonTransformer(courses);
-                    break;
-                case "HTML":
-                    Console.WriteLine("this is html");
-                    break;
-                default:
-                    Console.WriteLine("Not valid file type");
-                    break;
-            }
+            //This will call the traonsform function of the IReportTransform interface
+            //Every Report object will have its own definition of that function.
+            report.transform();
+
+            //print the report type for testing purposes.
+            report.printReportType();
+
         }
     }
 }
