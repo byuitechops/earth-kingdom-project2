@@ -17,18 +17,20 @@ namespace CanvasModuleGetter
             string api_token = UserInput.getToken();
 
             //courses will be assigned a list of strings
-            var courses = await ApiCall.MakeHTTPRequest(courseIds, api_token);
+            var coursesModuleLists = await ApiCall.MakeHTTPRequest(courseIds, api_token);
 
-            List<Course> coursesList = new List<Course>();
-            foreach (var course in courses)
+            //desirialize each course string into a course object.
+            List<Module[]> coursesList = new List<Module[]>();
+            foreach (var moduleList in coursesModuleLists)
             {
-                Course temp = new Course();
-                temp.FromJson(course);
-                //var courseObject = new Course().FromJson(course);
+                System.Console.WriteLine(moduleList);
+                var courseObject = Module.FromJsonArray(moduleList);
+                coursesList.Add(courseObject);
+                //System.Console.WriteLine(courseObject);
             }
 
             //report will be assigned the corrosponding Report Object
-            var report = ReportFactory.generateReport(reportType, courses);
+            var report = ReportFactory.generateReport(reportType, coursesModuleLists);
 
 
 
