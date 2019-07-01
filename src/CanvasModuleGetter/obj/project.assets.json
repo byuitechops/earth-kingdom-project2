@@ -909,11 +909,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\Users\\khartzog\\Documents\\My Training\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj",
       "projectName": "CanvasModuleGetter",
       "projectPath": "C:\\Users\\khartzog\\Documents\\My Training\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj",
       "packagesPath": "C:\\Users\\khartzog\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\khartzog\\Documents\\My Training\\earth-kingdom-project2\\src\\CanvasModuleGetter\\obj\\",
+=======
+      "projectUniqueName": "c:\\Users\\Evgeniy\\Documents\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj",
+      "projectName": "CanvasModuleGetter",
+      "projectPath": "c:\\Users\\Evgeniy\\Documents\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj",
+      "packagesPath": "C:\\Users\\Evgeniy\\.nuget\\packages\\",
+      "outputPath": "c:\\Users\\Evgeniy\\Documents\\earth-kingdom-project2\\src\\CanvasModuleGetter\\obj\\",
+>>>>>>> 83bf6240ecf6b77fc257a9d9f44bfc742afdd521
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
