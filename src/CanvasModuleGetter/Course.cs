@@ -7,6 +7,7 @@ namespace CanvasModuleGetter
 
     using System.Globalization;
     using Newtonsoft.Json;
+    using Newtonsoft.Json.Linq;
     using Newtonsoft.Json.Converters;
 
     public partial class Course

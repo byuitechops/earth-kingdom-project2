@@ -20,11 +20,21 @@ namespace CanvasModuleGetter
             var courses = await ApiCall.MakeHTTPRequest(courseIds, api_token);
 
             List<Course> coursesList = new List<Course>();
+            List<object> json = new List<dynamic>();
             foreach (var course in courses)
             {
-                Course temp = new Course();
-                temp.FromJson(course);
-                //var courseObject = new Course().FromJson(course);
+                //Console.WriteLine(course);
+                dynamic data = JsonConvert.DeserializeObject(course);
+                Console.WriteLine(data);
+                foreach (var prop in data)
+                    {   
+                        json.Add(prop);
+                    }
+                foreach (var prop in json){
+                var courseObject = Course.FromJson(prop);
+                Console.WriteLine(courseObject);
+
+                }
             }
 
             //report will be assigned the corrosponding Report Object
