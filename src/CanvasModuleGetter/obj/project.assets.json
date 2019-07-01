@@ -903,30 +903,28 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Evgeniy\\.nuget\\packages\\": {},
+    "C:\\Users\\khartzog\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "c:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj",
+      "projectUniqueName": "C:\\Users\\khartzog\\Documents\\My Training\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj",
       "projectName": "CanvasModuleGetter",
-      "projectPath": "c:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj",
-      "packagesPath": "C:\\Users\\Evgeniy\\.nuget\\packages\\",
-      "outputPath": "c:\\Users\\Evgeniy\\Documents\\Earth-Kingdom\\earth-kingdom-project2\\src\\CanvasModuleGetter\\obj\\",
+      "projectPath": "C:\\Users\\khartzog\\Documents\\My Training\\earth-kingdom-project2\\src\\CanvasModuleGetter\\CanvasModuleGetter.csproj",
+      "packagesPath": "C:\\Users\\khartzog\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\khartzog\\Documents\\My Training\\earth-kingdom-project2\\src\\CanvasModuleGetter\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Evgeniy\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "C:\\Users\\khartzog\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
