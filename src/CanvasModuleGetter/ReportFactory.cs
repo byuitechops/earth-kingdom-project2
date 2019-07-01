@@ -5,7 +5,7 @@ namespace CanvasModuleGetter
 {
     public static class ReportFactory
     {
-        public static IReportTransform generateReport(string reportType, List<string> courses) //consider Generic. Talk more with Josh. Also consider enum for reportType
+        public static IReportTransform generateReport(string reportType, List<string> courses, List<Module[]> coursesList) //consider Generic. Talk more with Josh. Also consider enum for reportType
         {
             IReportTransform reportObject;
 
@@ -13,7 +13,7 @@ namespace CanvasModuleGetter
             switch (reportType)
             {
                 case "CSV":
-                    reportObject = new CsvReport(courses);
+                    reportObject = new CsvReport(courses, coursesList);
                     break;
                 case "JSON":
                     reportObject = new JsonReport(courses);

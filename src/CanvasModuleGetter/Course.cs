@@ -10,7 +10,7 @@ namespace CanvasModuleGetter
     using Newtonsoft.Json.Linq;
     using Newtonsoft.Json.Converters;
 
-    public partial class Course
+    public partial class Module
     {
         [JsonProperty("id")]
         public long Id { get; set; }
@@ -88,14 +88,17 @@ namespace CanvasModuleGetter
         public long? ContentId { get; set; }
     }
 
-    public partial class Course
+    public partial class Module
     {
-        public static Course FromJson(string json) => JsonConvert.DeserializeObject<Course>(json, CanvasModuleGetter.Converter.Settings);
+        public static Module FromJson(string json) => JsonConvert.DeserializeObject<Module>(json, CanvasModuleGetter.Converter.Settings);
+        public static Module[] FromJsonArray(string json) => JsonConvert.DeserializeObject<Module[]>(json, CanvasModuleGetter.Converter.Settings);
+
+
     }
 
     public static class Serialize
     {
-        public static string ToJson(this Course self) => JsonConvert.SerializeObject(self, CanvasModuleGetter.Converter.Settings);
+        public static string ToJson(this Module self) => JsonConvert.SerializeObject(self, CanvasModuleGetter.Converter.Settings);
     }
 
     internal static class Converter

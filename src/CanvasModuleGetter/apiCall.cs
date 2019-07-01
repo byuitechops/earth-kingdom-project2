@@ -42,7 +42,7 @@ namespace CanvasModuleGetter
                 {
                     foreach (var courseId in courseIds)
                     {
-                        string url = "https://byui.instructure.com//api/v1/courses/" + courseId + "/modules?include[]=items";
+                        string url = "https://byui.instructure.com//api/v1/courses/" + courseId + "/modules?include[]=items&per_page=100";
                         string responseBody = await client.GetStringAsync(url);
                         courses.Add(responseBody);
                     }
