@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace CanvasModuleGetter
 {
@@ -15,16 +16,21 @@ namespace CanvasModuleGetter
             reportType = "JSON";
         }
 
-        public void JsonTransformer(dynamic data)
+        public void JsonTransformer()
         {
             System.IO.File.WriteAllText(Directory.GetCurrentDirectory() + @"\output\activity02.json", string.Empty);
-            string serialized = JsonConvert.SerializeObject(data);
-            System.IO.File.WriteAllText(Directory.GetCurrentDirectory() + @"\output\activity02.json", serialized);
+            List<dynamic> ModuleList = new List<dynamic>();
+            foreach (var course in courses)
+            {
+                ModuleList.Add(JsonConvert.DeserializeObject(course));
+            }
+            string data = JsonConvert.SerializeObject(ModuleList, Formatting.Indented);
+            System.IO.File.WriteAllText(Directory.GetCurrentDirectory() + @"\output\activity02.json", data);
         }
 
         public void transform()
         {
-            //throw new System.NotImplementedException();
+            this.JsonTransformer();
         }
 
         public void printReportType()
