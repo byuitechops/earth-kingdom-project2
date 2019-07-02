@@ -28,12 +28,12 @@ namespace CanvasModuleGetter
             foreach (var course in this.coursesList)
             {
                 counter++;
-                System.IO.File.WriteAllText(Directory.GetCurrentDirectory() + @"\activity02-" + counter + ".csv", string.Empty);
+                System.IO.File.WriteAllText(Directory.GetCurrentDirectory() + @"\output\activity02-" + counter + ".csv", string.Empty);
                 var firstobj = course[0];
 
                 JObject o = (JObject)JToken.FromObject(firstobj);
-        
-                
+
+
                 //Console.WriteLine(course);
                 //dynamic data = JsonConvert.DeserializeObject(course);
                 //Console.WriteLine(data);
@@ -49,10 +49,10 @@ namespace CanvasModuleGetter
                 // foreach (var p in json){
                 //     Console.WriteLine(p);
                 // }
-                using (TextWriter writer = new StreamWriter(Directory.GetCurrentDirectory() + @"\activity02-" + counter + ".csv", true, System.Text.Encoding.UTF8))
+                using (TextWriter writer = new StreamWriter(Directory.GetCurrentDirectory() + @"\output\activity02-" + counter + ".csv", true, System.Text.Encoding.UTF8))
                 {
                     var csv = new CsvWriter(writer);
-                    foreach(var p in o.Properties())
+                    foreach (var p in o.Properties())
                     {
                         Console.WriteLine(p.Name);
                         csv.WriteField(p.Name);

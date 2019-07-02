@@ -23,10 +23,10 @@ namespace CanvasModuleGetter
             List<Module[]> coursesList = new List<Module[]>();
             foreach (var moduleList in coursesModuleLists)
             {
-                //System.Console.WriteLine(moduleList);
+                //Console.WriteLine(moduleList);
                 var courseObject = Module.FromJsonArray(moduleList);
                 coursesList.Add(courseObject);
-                //System.Console.WriteLine(courseObject);
+                //Console.WriteLine(courseObject);
             }
 
             //report will be assigned the corrosponding Report Object
