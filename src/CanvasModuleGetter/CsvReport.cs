@@ -27,6 +27,11 @@ namespace CanvasModuleGetter
             var counter = 0;
             foreach (var course in this.coursesList)
             {
+                /**********************************************
+                 * TODO: Change these foreach loops to firstly 
+                 * take a Module, then foreach item in that 
+                 * module make a csv entry
+                 **********************************************/
                 counter++;
                 System.IO.File.WriteAllText(Directory.GetCurrentDirectory() + @"\output\activity02-" + counter + ".csv", string.Empty);
                 var firstobj = course[0];
