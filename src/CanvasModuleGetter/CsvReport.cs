@@ -37,6 +37,7 @@ namespace CanvasModuleGetter
                 var firstobj = course[0];
 
                 JObject o = (JObject)JToken.FromObject(firstobj);
+                o.Remove("Items");
 
 
                 //Console.WriteLine(course);
