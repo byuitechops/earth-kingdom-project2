@@ -33,12 +33,11 @@ namespace CanvasModuleGetter
                  * module make a csv entry
                  **********************************************/
                 counter++;
-                System.IO.File.WriteAllText(Directory.GetCurrentDirectory() + @"\output\activity02-" + counter + ".csv", string.Empty);
+                System.IO.File.WriteAllText(Directory.GetCurrentDirectory() + @"\activity02.csv", string.Empty);
                 var firstobj = course[0];
 
                 JObject o = (JObject)JToken.FromObject(firstobj);
                 o.Remove("Items");
-
 
                 //Console.WriteLine(course);
                 //dynamic data = JsonConvert.DeserializeObject(course);
@@ -55,15 +54,33 @@ namespace CanvasModuleGetter
                 // foreach (var p in json){
                 //     Console.WriteLine(p);
                 // }
-                using (TextWriter writer = new StreamWriter(Directory.GetCurrentDirectory() + @"\output\activity02-" + counter + ".csv", true, System.Text.Encoding.UTF8))
+                using (TextWriter writer = new StreamWriter(Directory.GetCurrentDirectory() + @"\activity02.csv", true, System.Text.Encoding.UTF8))
                 {
                     var csv = new CsvWriter(writer);
                     foreach (var p in o.Properties())
                     {
-                        Console.WriteLine(p.Name);
+                        //Console.WriteLine(p.Name);
                         csv.WriteField(p.Name);
                     }
                     csv.NextRecord();
+
+                    JToken values;
+                    foreach (var obj in course){
+                        JObject o2 = (JObject)JToken.FromObject(obj);
+                        //o2.Remove("Items");
+
+                       
+                        foreach(var p in o2.Properties()){
+                            if (o2.TryGetValue(p.Name, out values)){
+                                if (p.Name != "items"){
+                                  
+                                }
+                            }
+                        }
+                        
+                        //csv.WriteField(json);
+                        csv.NextRecord();
+                    }
 
                     // foreach (var v in o.PropertyValues()){
                     //     csv.WriteField(v.Value);
