@@ -64,23 +64,23 @@ namespace CanvasModuleGetter
                     }
                     csv.NextRecord();
 
-                    JToken values;
-                    foreach (var obj in course){
-                        JObject o2 = (JObject)JToken.FromObject(obj);
-                        //o2.Remove("Items");
+                    // JToken values;
+                    // foreach (var obj in course){
+                    //     JObject o2 = (JObject)JToken.FromObject(obj);
+                    //     //o2.Remove("Items");
 
                        
-                        foreach(var p in o2.Properties()){
-                            if (o2.TryGetValue(p.Name, out values)){
-                                if (p.Name != "items"){
+                    //     foreach(var p in o2.Properties()){
+                    //         if (o2.TryGetValue(p.Name, out values)){
+                    //             if (p.Name != "items"){
                                   
-                                }
-                            }
-                        }
+                    //             }
+                    //         }
+                    //     }
                         
-                        //csv.WriteField(json);
-                        csv.NextRecord();
-                    }
+                    //     //csv.WriteField(json);
+                    //     csv.NextRecord();
+                    // }
 
                     // foreach (var v in o.PropertyValues()){
                     //     csv.WriteField(v.Value);
