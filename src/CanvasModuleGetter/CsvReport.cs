@@ -53,21 +53,6 @@ namespace CanvasModuleGetter
                 o.Add("url", firstitem.Url);
                 o.Add("content_id", firstitem.ContentId);
 
-                //Console.WriteLine(course);
-                //dynamic data = JsonConvert.DeserializeObject(course);
-                //Console.WriteLine(data);
-
-                //List<object> json = new List<dynamic>();
-                // JArray json = new JArray();
-                //     foreach (var prop in data)
-                //     {   
-                //         //Console.WriteLine(prop);
-                //         json.Add(prop);
-                //     }
-                //Console.WriteLine(json);
-                // foreach (var p in json){
-                //     Console.WriteLine(p);
-                // }
                 using (TextWriter writer = new StreamWriter(Directory.GetCurrentDirectory() + @"\activity02.csv", true, System.Text.Encoding.UTF8))
                 {
                     var csv = new CsvWriter(writer);
@@ -78,52 +63,41 @@ namespace CanvasModuleGetter
                     }
                     csv.NextRecord();
 
-                    // JToken values;
-                    // foreach (var obj in course)
-                    // {
-                    //     JObject o2 = (JObject)JToken.FromObject(obj);
-                    //     //o2.Remove("Items");
+                    foreach (var mod in course)
+                    {
+                        foreach (var item in mod.Items)
+                        {
+                            System.Console.WriteLine(mod.PrerequisiteModuleIds);
+                            csv.WriteField(mod.Id);
+                            csv.WriteField(mod.Name);
+                            csv.WriteField(mod.Position);
+                            csv.WriteField(mod.UnlockAt);
+                            csv.WriteField(mod.RequireSequentialProgress);
+                            csv.WriteField(mod.PublishFinalGrade);
+                            csv.WriteField(mod.PrerequisiteModuleIds);
+                            csv.WriteField(mod.Published);
+                            csv.WriteField(mod.ItemsCount);
+                            csv.WriteField(mod.ItemsUrl);
 
+                            csv.WriteField(item.Id);
+                            csv.WriteField(item.Title);
+                            csv.WriteField(item.Position);
+                            csv.WriteField(item.Indent);
+                            csv.WriteField(item.Type);
+                            csv.WriteField(item.ModuleId);
+                            csv.WriteField(item.HtmlUrl);
+                            csv.WriteField(item.ExternalUrl);
+                            csv.WriteField(item.NewTab);
+                            csv.WriteField(item.Published);
+                            csv.WriteField(item.PageUrl);
+                            csv.WriteField(item.Url);
+                            csv.WriteField(item.ContentId);
 
-                    //     foreach (var p in o2.Properties())
-                    //     {
-                    //         if (o2.TryGetValue(p.Name, out values))
-                    //         {
-                    //             if (p.Name != "items")
-                    //             {
+                            csv.NextRecord();
+                        }
+                    }
 
-                    //             }
-                    //         }
-                    //     }
-
-                    //     //csv.WriteField(json);
-                    //     csv.NextRecord();
-                    // }
-
-                    // foreach (var v in o.PropertyValues()){
-                    //     csv.WriteField(v.Value);
-                    //     //csv.NextRecord();
-                    // }
-                    // csv.NextRecord();
-                    // var firstObject = json[0];
-
-                    //Console.WriteLine(firstObject);
-                    //   foreach (JsonProperty property in course)
-                    //       csv.WriteField(property.Name);
-                    //  csv.NextRecord();
-
-
-
-                    //  foreach (var obj in json)
-                    //     {
-                    //        foreach (JProperty prop in obj)
-                    //         {
-                    //          csv.WriteField(prop.Value.ToString());
-                    //          }
-                    //        csv.NextRecord();
-                    //     }
-
-                    //  writer.Flush();
+                    writer.Flush();
                 }
             }
         }

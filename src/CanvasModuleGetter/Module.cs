@@ -31,7 +31,7 @@ namespace CanvasModuleGetter
         public bool PublishFinalGrade { get; set; }
 
         [JsonProperty("prerequisite_module_ids")]
-        public object[] PrerequisiteModuleIds { get; set; }
+        public int[] PrerequisiteModuleIds { get; set; }
 
         [JsonProperty("published")]
         public bool Published { get; set; }
