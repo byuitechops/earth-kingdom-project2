@@ -19,7 +19,7 @@ namespace CanvasModuleGetter
                     reportObject = new JsonReport(courses);
                     break;
                 case "HTML":
-                    reportObject = new HtmlReport(courses);
+                    reportObject = new HtmlReport(courses, coursesList);
                     break;
                 default:
                     Console.WriteLine("Not valid file type");
