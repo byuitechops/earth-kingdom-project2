@@ -67,14 +67,22 @@ namespace CanvasModuleGetter
                     {
                         foreach (var item in mod.Items)
                         {
-                            System.Console.WriteLine(mod.PrerequisiteModuleIds);
+                            string result = string.Join("", mod.PrerequisiteModuleIds);
+                            //System.Console.WriteLine("result: " + result);
+                            //System.Console.WriteLine(mod.PrerequisiteModuleIds);
+                            // if (result == ""){
+                            //     mod.PrerequisiteModuleIds = "";
+                                //System.Console.WriteLine("Null");
+                            //}
+                    
                             csv.WriteField(mod.Id);
                             csv.WriteField(mod.Name);
                             csv.WriteField(mod.Position);
                             csv.WriteField(mod.UnlockAt);
                             csv.WriteField(mod.RequireSequentialProgress);
                             csv.WriteField(mod.PublishFinalGrade);
-                            csv.WriteField(mod.PrerequisiteModuleIds);
+                            csv.WriteField(result);
+                            //csv.WriteField(mod.PrerequisiteModuleIds);
                             csv.WriteField(mod.Published);
                             csv.WriteField(mod.ItemsCount);
                             csv.WriteField(mod.ItemsUrl);
