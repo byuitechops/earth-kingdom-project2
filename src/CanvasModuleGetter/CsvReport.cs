@@ -33,7 +33,7 @@ namespace CanvasModuleGetter
                  * module make a csv entry
                  **********************************************/
                 counter++;
-                System.IO.File.WriteAllText(Directory.GetCurrentDirectory() + @"\activity02.csv", string.Empty);
+                System.IO.File.WriteAllText(Directory.GetCurrentDirectory() + @"\output\activity02.csv", string.Empty);
                 var firstobj = course[0];
                 var firstitem = course[0].Items[0];
 
@@ -53,7 +53,7 @@ namespace CanvasModuleGetter
                 o.Add("url", firstitem.Url);
                 o.Add("content_id", firstitem.ContentId);
 
-                using (TextWriter writer = new StreamWriter(Directory.GetCurrentDirectory() + @"\activity02.csv", true, System.Text.Encoding.UTF8))
+                using (TextWriter writer = new StreamWriter(Directory.GetCurrentDirectory() + @"\output\activity02.csv", true, System.Text.Encoding.UTF8))
                 {
                     var csv = new CsvWriter(writer);
                     foreach (var p in o.Properties())
@@ -68,7 +68,7 @@ namespace CanvasModuleGetter
                         foreach (var item in mod.Items)
                         {
                             string result = string.Join(" ", mod.PrerequisiteModuleIds);
-                    
+
                             csv.WriteField(mod.Id);
                             csv.WriteField(mod.Name);
                             csv.WriteField(mod.Position);
