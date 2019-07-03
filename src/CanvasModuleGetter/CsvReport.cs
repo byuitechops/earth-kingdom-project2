@@ -35,9 +35,23 @@ namespace CanvasModuleGetter
                 counter++;
                 System.IO.File.WriteAllText(Directory.GetCurrentDirectory() + @"\activity02.csv", string.Empty);
                 var firstobj = course[0];
+                var firstitem = course[0].Items[0];
 
                 JObject o = (JObject)JToken.FromObject(firstobj);
-                o.Remove("Items");
+                o.Remove("items");
+                o.Add("item_id", firstitem.Id);
+                o.Add("title", firstitem.Title);
+                o.Add("position", firstitem.Position);
+                o.Add("item_id", firstitem.Id);
+                o.Add("item_id", firstitem.Id);
+                o.Add("item_id", firstitem.Id);
+                o.Add("item_id", firstitem.Id);
+                o.Add("item_id", firstitem.Id);
+                o.Add("item_id", firstitem.Id);
+                o.Add("item_id", firstitem.Id);
+                o.Add("item_id", firstitem.Id);
+                o.Add("item_id", firstitem.Id);
+                o.Add("item_id", firstitem.Id);
 
                 //Console.WriteLine(course);
                 //dynamic data = JsonConvert.DeserializeObject(course);
@@ -65,19 +79,23 @@ namespace CanvasModuleGetter
                     csv.NextRecord();
 
                     JToken values;
-                    foreach (var obj in course){
+                    foreach (var obj in course)
+                    {
                         JObject o2 = (JObject)JToken.FromObject(obj);
                         //o2.Remove("Items");
 
-                       
-                        foreach(var p in o2.Properties()){
-                            if (o2.TryGetValue(p.Name, out values)){
-                                if (p.Name != "items"){
-                                  
+
+                        foreach (var p in o2.Properties())
+                        {
+                            if (o2.TryGetValue(p.Name, out values))
+                            {
+                                if (p.Name != "items")
+                                {
+
                                 }
                             }
                         }
-                        
+
                         //csv.WriteField(json);
                         csv.NextRecord();
                     }
